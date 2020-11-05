@@ -38,8 +38,8 @@ interface RetrofitService {
             val okHttpClient =
                 OkHttpClient.Builder()
                     .addNetworkInterceptor(onlineInterceptor)
-//                    .addInterceptor(offlineInterceptor)
-//                    .cache(cache)
+                    .addInterceptor(offlineInterceptor)
+                    .cache(cache)
                     .build()
 
             val retrofit = Retrofit.Builder()
